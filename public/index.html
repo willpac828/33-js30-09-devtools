@@ -18,29 +18,42 @@
     }
 
     // Regular
-
+    console.log('HI');
     // Interpolated
-
+    console.log('Hi %s', 'hey');
     // Styled
-
+    console.log('%c Hi', 'font-size: 20px');
     // warning!
-
+    console.warn('stop!');
     // Error :|
-
+    console.error('error!');
     // Info
 
     // Testing
-
+    const p = document.querySelector('p');
+    // This one displays cuz it's not true
+    console.assert(p.classList.contains('stuff'), 'It doesnt have that class!')
+    //  This one doesn't display cuz it's true!
+    console.assert(1 === 1, "That's not right!");
     // clearing
 
     // Viewing DOM Elements
-
+    console.dir(p);
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old!`);
+      console.log(`I like ${dog.name}`);
+      console.groupEnd(`${dog.name}`);
+    })
     // counting
-
+    // console.count('xBREAKxDOWNx');
     // timing
-
+    console.time('get PI');
+    const pi = Math.PI.toFixed(5);
+    console.timeEnd('get PI');
+    console.log(pi);
   </script>
 </body>
 </html>
